@@ -1,0 +1,208 @@
+/* 
+This file contains the styles for the website, including layout, typography, and responsive design. 
+*/
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #E5D3B3;
+    padding-top: 70px; /* Space for fixed navbar */
+}
+
+/* Header styles */
+header {
+    background: #b6916a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #664229;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar ul li {
+    float: left;
+    margin: 10px;
+}
+
+.navbar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 14px 20px;
+
+}
+
+.navbar ul li a:hover {
+    background-color: #987554;    
+
+}
+
+a[id$="-anchor"] {
+    display: block;
+    position: relative;
+    top: -20px; /* Adjust based on navbar height */
+    visibility: hidden;
+}
+
+[id] {
+    scroll-margin-top: 80px; /* Adjust this value to match the height of your navbar */
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+.section-box {
+    background-color: #b6916a; /* Light background for the box */
+    border: 1px solid #ccc; /* Optional border */
+    border-radius: 15px; /* Curved corners */
+    padding: 20px; /* Space inside the box */
+    margin: 20px 0; /* Space outside the box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    color: #ffffff; /* Text color */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Section styles */
+.section-box h2 {
+    font-size: 30px;
+}
+
+.section-box p {
+    font-size: 20px;
+    font-weight: normal; /* Normal corresponds to the numeric value 400 */
+}
+
+/* Styles for unordered lists inside .section-box */
+.section-box ul {
+    padding-left: 10px; /* Indents the entire list, including bullet points */
+    font-size: 20px;
+}
+
+/* Styles for anchor tags inside unordered lists in .section-box */
+.section-box ul a {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+/* Styles for list items inside unordered lists in .section-box */
+.section-box ul li {
+    margin-left: 10px; /* Optional: Adds extra space for each list item */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Styles for anchor tags inside list items in .section-box */
+.section-box ul li a {
+    margin-left: 0; /* Remove margin from the <a> tag to align with the bullet point */
+    margin: 10px 0; /* Space between list items */
+    font-size: 20px;
+    font-weight: normal; /* Normal corresponds to the numeric value 400 */
+    color: #ffffff; /* Text color */
+    text-decoration: underline; 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Styles for images inside .section-box */
+/* Style for the gallery container */
+.gallery {
+    display: flex;
+    gap: 10px; /* Space between images */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow images to wrap to the next row if needed */
+}
+
+/* Style for gallery images */
+.gallery-item {
+    width: 150px; /* Set a fixed width for the images */
+    height: 100px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure the image fits within the box without distortion */
+    border: 2px solid #ccc; /* Optional: Add a border around the images */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+    transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+/* Hover effect for gallery images */
+.gallery-item:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Ensures the modal is positioned relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    z-index: 1000; /* Ensures the modal is above all other elements */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-direction: column; /* Stack content vertically */
+}
+
+/* Modal Content */
+.modal-content {
+    max-width: 80%; /* Limit the width of the image */
+    max-height: 80%; /* Limit the height of the image */
+    border-radius: 10px; /* Optional: Rounded corners for the image */
+    display: block; /* Ensure the image is visible by default */
+}
+
+/* Close Button */
+.close {
+    position: absolute; /* Position relative to the modal */
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
